@@ -4,18 +4,34 @@
 
 	class Route {
 
+		private $routes;
+
+		public function __construct() {
+			$this->initRoutes();
+		}
+
+		public function getRoutes() {
+			return $this->routes;
+		}
+
+		public function setRoutes(array $routes) {
+			$this->routes = $routes;
+		}
+
 		public function initRoutes() {
 
 			$routes['home'] = [
 				'route' => '/',
-				'controller' => 'indexController',
+				'controller' => 'IndexController',
 				'action' => 'index'
 			];
 			$routes['sobre_nos'] = [
 				'route' => '/sobre_nos',
-				'controller' => 'indexController',
+				'controller' => 'IndexController',
 				'action' => 'sobreNos'
 			];
+
+			$this->setRoutes($routes);
 
 		}
 
