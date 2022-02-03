@@ -8,6 +8,7 @@
 
 		public function __construct() {
 			$this->initRoutes();
+			$this->run($this->getUrl());
 		}
 
 		public function getRoutes() {
@@ -22,16 +23,32 @@
 
 			$routes['home'] = [
 				'route' => '/',
-				'controller' => 'IndexController',
+				'controller' => 'indexController',
 				'action' => 'index'
 			];
 			$routes['sobre_nos'] = [
 				'route' => '/sobre_nos',
-				'controller' => 'IndexController',
+				'controller' => 'indexController',
 				'action' => 'sobreNos'
 			];
 
 			$this->setRoutes($routes);
+
+		}
+
+		public function run($url) {
+
+			echo "********".$url."********";
+
+			foreach($this->getRoutes() as $path => $route) {
+				
+				if($url == $route['route']) {
+					$class = "App\\Controllers\\".ucfirst($route['controller']);
+
+					$controller = new $class;
+				}
+
+			}
 
 		}
 

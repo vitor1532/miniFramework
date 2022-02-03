@@ -16,6 +16,4 @@
 	print_r($route->getRoutes());
 	echo "</pre>";
 
-
-
 ?>
