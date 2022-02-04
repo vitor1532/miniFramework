@@ -31,6 +31,11 @@
 				'controller' => 'indexController',
 				'action' => 'sobreNos'
 			];
+			$routes['contato'] = [
+				'route' => '/contato',
+				'controller' => 'indexController',
+				'action' => 'contato'
+			];
 
 			$this->setRoutes($routes);
 

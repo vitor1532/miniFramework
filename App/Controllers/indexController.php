@@ -12,6 +12,10 @@
 			echo 'action sobreNos';
 		}
 
+		public function contato() {
+			echo 'contato';
+		}
+
 	}
 
 

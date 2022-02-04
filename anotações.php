@@ -20,5 +20,8 @@ A função run (que recebe a url como parametro $url) dá inicio a um foreach us
 Essa função permite verificar com base nos arrays recebidos qual rota devemos tomar. Colocamos então um teste para verificar com qual url estamos lidando(se o parametro $url é igual ao $route) e então, redirecionar para a rota. Por fim, o if instancia o __construct() com base na rota tomada.
 
 
+
+
+
 */
 ?>
