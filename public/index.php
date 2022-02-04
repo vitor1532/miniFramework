@@ -3,6 +3,4 @@
 
 	$route = new \App\Route;
 
-	
-
 ?>
