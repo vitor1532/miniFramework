@@ -16,6 +16,11 @@
 			echo 'contato';
 		}
 
+		public function teste() {
+			//header("Location: ../App/Views/teste.php");
+			echo 'ainda não deu';
+		}
+
 	}
 
 
