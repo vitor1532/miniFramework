@@ -1,24 +1,27 @@
 <?php
 
 	namespace App\Controllers;
+    $caminho = '../App/Views/index/';
+    class IndexController {
 
-	class IndexController {
+        public $caminho='../App/Views/index/';
 
 		public function index() {
-			echo 'action index';
+
+            require_once $this->caminho.'index.phtml';
 		}
 
 		public function sobreNos() {
-			echo 'action sobreNos';
+			require_once $this->caminho.'sobreNos.phtml';
 		}
 
 		public function contato() {
-			echo 'contato';
+			require_once $this->caminho.'contato.phtml';
 		}
 
 		public function teste() {
 
-			header("Location: ../App/Views/teste.php");
+			require_once "../App/Views/teste.php";
 			//echo 'ainda não deu';
 		}
 

@@ -24,6 +24,25 @@ Alteramos também a proteção de alguns metodos, mudando de public para protect
 Definimos um método abstrato e protegido vazio com o nome de initRoutes que, quando herdado pela classe de Routes.php, passa a ter funções definidas
 Por fim, determinamos ao script Routes.php para usar o namespace de MF/Init/Bootstrap
 
+//// AULA VIEWS
+
+Cria-se um diretório 'index' dentro da pasta views, que irá se comunicar diretamente com os controladores de IndexController.php
+
+No diretório index(dentro de Views) são criados dois arquivos de extensão PHTML
+phtml é geralmente a extensão usada pelos frameworks para misturar códigos php com html
+
+transferimos o conteúdo das funções contidas no controller para suas respectivas páginas phtml
+
+
+
+No IndexController, usamos require_once
+A referencia dos requires e outras requisições está sempre sendo carregado a partir do script index.php no diretório public
+O PONTO DE PARTIDA DOS REQUIRES É SEMPRE DE INDEX.PHP (no dir public)
+
+
+
+
+
 
 */
 ?>
