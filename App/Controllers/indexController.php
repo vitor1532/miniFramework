@@ -1,24 +1,33 @@
 <?php
 
 	namespace App\Controllers;
-    $caminho = '../App/Views/index/';
+    //$caminho = '../App/Views/index/';
     class IndexController {
+
+        private $view;
+
+        public function __construct() {
+            $this->view = new \stdClass();// stdClass -> standart Class
+        }
 
         //public $caminho='../App/Views/index/';
 
 		public function index() {
-            
+            $this->view->dados = ['armario', 'cama', 'cadeira'];
+
             //require_once $this->caminho.'index.phtml';
             $this->render('index');
 		}
 
 		public function sobreNos() {
-			//require_once $this->caminho.'sobreNos.phtml';
+            $this->view->dados = ['Smartphone', 'Notebook', 'Mouse'];
+            //require_once $this->caminho.'sobreNos.phtml';
             $this->render('sobreNos');
 		}
 
 		public function contato() {
-			//require_once $this->caminho.'contato.phtml';
+            $this->view->dados = ['telefone'];
+            //require_once $this->caminho.'contato.phtml';
             $this->render('contato');
 		}
 
@@ -29,7 +38,12 @@
 		}
 
         public function render($view) {
-            require_once "../App/Views/index/".$view.".phtml";
+            $classeAtual = get_class($this);
+
+            $classeAtual = str_replace('App\\Controllers\\', '', $classeAtual);
+            $classeAtual = strtolower(str_replace('Controller', '', $classeAtual));
+
+            require_once "../App/Views/".$classeAtual."/".$view.".phtml";
         }
 
 	}

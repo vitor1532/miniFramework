@@ -1,6 +1,10 @@
 <h1>Sobre Nós</h1><hr>
 <?php
 
-echo 'action sobreNos';
+foreach ($this->view->dados as $dado => $key) {
+
+    echo $key."<br>";
+
+}
 
 ?>
