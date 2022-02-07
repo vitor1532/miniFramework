@@ -19,8 +19,10 @@ Para executar a instancia dinamica do obj e a execução do metodo dentro do obj
 A função run (que recebe a url como parametro $url) dá inicio a um foreach usando a getRoutes com os arrays de rota, o primeiro parametro sendo o $path e o segundo sendo o $route.
 Essa função permite verificar com base nos arrays recebidos qual rota devemos tomar. Colocamos então um teste para verificar com qual url estamos lidando(se o parametro $url é igual ao $route) e então, redirecionar para a rota. Por fim, o if instancia o __construct() com base na rota tomada.
 
-
-
+Retiramos os métodos de Routes.php, levando-os a uma classe abstrata (que só pode ser herdada), deixando assim o código mais simples
+Alteramos também a proteção de alguns metodos, mudando de public para protected
+Definimos um método abstrato e protegido vazio com o nome de initRoutes que, quando herdado pela classe de Routes.php, passa a ter funções definidas
+Por fim, determinamos ao script Routes.php para usar o namespace de MF/Init/Bootstrap
 
 
 */
