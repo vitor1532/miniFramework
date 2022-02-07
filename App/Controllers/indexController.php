@@ -17,8 +17,9 @@
 		}
 
 		public function teste() {
-			//header("Location: ../App/Views/teste.php");
-			echo 'ainda não deu';
+
+			header("Location: ../App/Views/teste.php");
+			//echo 'ainda não deu';
 		}
 
 	}
