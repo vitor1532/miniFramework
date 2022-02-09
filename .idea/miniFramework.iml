@@ -8,6 +8,7 @@
       <sourceFolder url="file://$MODULE_DIR$/vendor/MF" isTestSource="false" packagePrefix="MF\" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/MF/Init" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/MF/Controller" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
