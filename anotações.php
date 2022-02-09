@@ -39,8 +39,7 @@ No IndexController, usamos require_once
 A referencia dos requires e outras requisições está sempre sendo carregado a partir do script index.php no diretório public
 O PONTO DE PARTIDA DOS REQUIRES É SEMPRE DE INDEX.PHP (no dir public)
 
-
-
+Os models podem ser usados pelos controladores para recuperar informações de banco de dados, retorná-las aos controladores, que por sua vez, passam essas informações para a view, o consumidor final.
 
 
 
