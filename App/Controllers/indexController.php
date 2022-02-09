@@ -12,19 +12,19 @@
             $this->view->dados = ['armario', 'cama', 'cadeira'];
 
             //require_once $this->caminho.'index.phtml';
-            $this->render('index');
+            $this->render('index', 'layout1');
 		}
 
 		public function sobreNos() {
             $this->view->dados = ['Smartphone', 'Notebook', 'Mouse'];
             //require_once $this->caminho.'sobreNos.phtml';
-            $this->render('sobreNos');
+            $this->render('sobreNos', 'layout1');
 		}
 
 		public function contato() {
             $this->view->dados = ['telefone'];
             //require_once $this->caminho.'contato.phtml';
-            $this->render('contato');
+            $this->render('contato', 'layout2');
 		}
 
 		public function teste() {
