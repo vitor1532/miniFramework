@@ -81,5 +81,6 @@ implementamos por fim, um if(file_exists) verificando se o arquivo de layout exi
 usamos o else para renderizar a pagina sem layout, caso o mesmo não exista
 
 
+
 */
 ?>
