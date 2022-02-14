@@ -29,7 +29,9 @@
 
 		public function teste() {
 
-			require_once "../App/Views/teste.php";
+			$this->view->dados = ['Nintendo Switch', 'Playstation 4', 'Xbox'];
+			$this->render('teste', 'layout3');
+
 		}
 
 	}
