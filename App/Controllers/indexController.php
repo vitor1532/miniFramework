@@ -30,7 +30,6 @@
 		public function teste() {
 
 			require_once "../App/Views/teste.php";
-			//echo 'ainda não deu';
 		}
 
 	}
