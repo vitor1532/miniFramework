@@ -82,8 +82,30 @@ usamos o else para renderizar a pagina sem layout, caso o mesmo não exista
 
 //AULA MODELS E BANCO DE DADOS
 
+criamos o script connection.php dentro do diretório App
+Definimos o namespace App;
+criamos uma classe Connection com um método público estático chamado getDb (o método é definido estático para a classe Connection não precisar ser instanciada para o uso desse método)
+Esse método será responsável pela conexão com o banco de dados.
+Dentro da classe, incluimos um bloco try catch onde o objetivo é estabelecer uma conexão utilizando o PDO.
+
+Criamos um banco de dados chamado mvc e nele, uma tabela tb_produtos com tres parametros, o id(primary key), a descrição e o preço
+
+O proximo passo é levar a conexão a um modelo (Model)
+
+no diretório Models dentro de App, criamos um script chamado produto.php
+Definimos um namespace App\Models;
+
+e definimos então uma classe chamada produto. nela, criamos uma variavel protected $db que receberá a conexão com o banco. Dentro dessa mesma classe, configuramos a função __construct que vai receber a instancia de PDO com a seguinte sintaxe:
+--->public function __construct(PDO $db)<--- (o PDO aí define a propriedade do parametro a ser recebido)
+
+Em indexController, na função index, criamos uma instancia de conexão e de modelo. Para isso, precisamos definir o uso dos namespaces App\Connection; e App\Models\Produto;
+
+na função index() fazemos uma variável $conn e nela instanciamos a classe de conexão e ligada nela, a função getDb, usando a sintaxe:
+--->Connection::getDb()<---
 
 
+para instanciar o modelo, criamos uma variável $produto e nela, instanciamos a classe Produto($conn)
 
+A partir da instancia, criamos métodos que irão manipular os dados no banco.
 */
 ?>
