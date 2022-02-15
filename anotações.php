@@ -80,6 +80,9 @@ modificando o require do mesmo, passando require_once "../App/Views".$layout.".p
 implementamos por fim, um if(file_exists) verificando se o arquivo de layout existe para então, renderiza-lo
 usamos o else para renderizar a pagina sem layout, caso o mesmo não exista
 
+//AULA MODELS E BANCO DE DADOS
+
+
 
 
 */

@@ -1,11 +1,13 @@
 <h1>Index</h1><hr>
 <?php
+    
+    /*echo '<pre>';
+    print_r($this->view->dados);
+    echo '</pre>';*/
 
-    echo 'action index <br>';
+    foreach ($this->view->dados as $indice => $produto) {
 
-    foreach ($this->view->dados as $dado => $key) {
-
-        echo $key."<br>";
+        echo $produto['id']. ' - '.$produto['descricao'].' - '.$produto['preco'].'<br>';
 
     }
 
