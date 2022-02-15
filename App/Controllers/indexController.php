@@ -31,18 +31,45 @@
 		public function sobreNos() {
             //$this->view->dados = ['Smartphone', 'Notebook', 'Mouse'];
             //require_once $this->caminho.'sobreNos.phtml';
+            //instancia de conexão
+			$conn = Connection::getDb();
+
+			//instancia de modelo
+			$produto = new Produto($conn);
+
+			$produtos = $produto->getProdutos();
+
+			$this->view->dados = $produtos;
             $this->render('sobreNos', 'layout1');
 		}
 
 		public function contato() {
             //$this->view->dados = ['telefone'];
             //require_once $this->caminho.'contato.phtml';
+            //instancia de conexão
+			$conn = Connection::getDb();
+
+			//instancia de modelo
+			$produto = new Produto($conn);
+
+			$produtos = $produto->getProdutos();
+
+			$this->view->dados = $produtos;
             $this->render('contato', 'layout2');
 		}
 
 		public function teste() {
 
 			//$this->view->dados = ['Nintendo Switch', 'Playstation 4', 'Xbox'];
+			//instancia de conexão
+			$conn = Connection::getDb();
+
+			//instancia de modelo
+			$produto = new Produto($conn);
+
+			$produtos = $produto->getProdutos();
+
+			$this->view->dados = $produtos;
 			$this->render('teste', 'layout3');
 
 		}
