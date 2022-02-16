@@ -18,7 +18,8 @@
 
 			}catch(\PDOException $e) {
 
-				//
+				echo $e->getCode() . "<br>";
+				echo $e->getMessage();
 
 			}
 
