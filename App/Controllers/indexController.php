@@ -2,23 +2,22 @@
 
 	namespace App\Controllers;
 
+	//recursos do miniFramework
 	use MF\Controller\Action;
-	use App\Connection;
+	use MF\Model\Container;
+
+	//os models
 	use App\Models\Produto;
+	use App\Models\Info;
+	use App\Models\Contato;
 
     class IndexController extends Action {
 
         //public $caminho='../App/Views/index/';
 
 		public function index() {
-            
-            //$this->view->dados = ['armario', 'cama', 'cadeira'];
 
-			//instancia de conexão
-			$conn = Connection::getDb();
-
-			//instancia de modelo
-			$produto = new Produto($conn);
+			$produto = Container::getModel('Produto');
 
 			$produtos = $produto->getProdutos();
 
@@ -29,38 +28,29 @@
 		}
 
 		public function sobreNos() {
-            //$this->view->dados = ['Smartphone', 'Notebook', 'Mouse'];
-            //require_once $this->caminho.'sobreNos.phtml';
-            //instancia de conexão
-			$conn = Connection::getDb();
+            
+            //instancia de conexão e model dinamica
+			$info = Container::getModel('Info');
 
-			//instancia de modelo
-			$produto = new Produto($conn);
+			$infos = $info->getInfo();
 
-			$produtos = $produto->getProdutos();
-
-			$this->view->dados = $produtos;
+			$this->view->dados = $infos;
             $this->render('sobreNos', 'layout1');
 		}
 
 		public function contato() {
-            //$this->view->dados = ['telefone'];
-            //require_once $this->caminho.'contato.phtml';
-            //instancia de conexão
-			$conn = Connection::getDb();
+            
+			//instancia de modelo e conexão
+			$contato = Container::getModel('Contato');
 
-			//instancia de modelo
-			$produto = new Produto($conn);
+			$contatos = $contato->getContatos();
 
-			$produtos = $produto->getProdutos();
-
-			$this->view->dados = $produtos;
+			$this->view->dados = $contatos;
             $this->render('contato', 'layout2');
 		}
 
 		public function teste() {
 
-			//$this->view->dados = ['Nintendo Switch', 'Playstation 4', 'Xbox'];
 			//instancia de conexão
 			$conn = Connection::getDb();
 
