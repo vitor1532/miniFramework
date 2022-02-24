@@ -51,16 +51,14 @@
 
 		public function teste() {
 
-			//instancia de conexão
-			$conn = Connection::getDb();
-
-			//instancia de modelo
-			$produto = new Produto($conn);
+			$produto = Container::getModel('Produto');
 
 			$produtos = $produto->getProdutos();
 
 			$this->view->dados = $produtos;
-			$this->render('teste', 'layout3');
+
+            //require_once $this->caminho.'index.phtml';
+            $this->render('teste', 'layout1');
 
 		}
 

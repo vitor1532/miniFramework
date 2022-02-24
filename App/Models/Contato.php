@@ -2,13 +2,9 @@
 
 	namespace App\Models;
 
-	class Contato {
+	use MF\Model\Model;
 
-		protected $db;
-
-		public function __construct(\PDO $db) {
-			$this->db = $db;
-		}
+	class Contato extends Model {
 
 		public function getContatos() {
 			
